@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="ISE.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<link href='//fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+h2.w3-center{
+
+font-family:Brush Script Std, Brush Script MT, cursive;
+
+font-weight: 900;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button4 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button4:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn4 {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer4 {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container4 {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content4 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close4 {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close4:hover,
+.close4:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+	
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column3 {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media (max-width: 650px) {
+  .column3 {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color:white;
+ 
+}
+
+.container3 {
+  padding: 0 16px;
+}
+
+.container3::after, .row3::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title3 {
+  color: grey;
+}
+
+.button3 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button3:hover {
+  background-color: #555;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.footer {
+  background: #061D25;
+  padding: 10px 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: white;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+ 
+  
+  }
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	 font-family: Allura;
+	 font-size: 22px;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+.example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+background-color: grey;
+ 
+ }
+.example1 h4 {
+ font-size: 3em;
+ color: white;
+ text-shadow: 3px 3px grey;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX0(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+	
+	
+
+
+</style>
+
+
+ </head>
+<body background="bg13.jpg">
+
+<nav class="navbar navbar-inverse" style="shadow:5px 3px white;">
+  <div class="container-fluid" >
+    <div class="navbar-header" ">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">BANGALORE INSTITUTE OF TECHNOLOGY</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROGRAME <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///C:/Users/PRASAD%20BIRDAR/Desktop/khan/research.html">Research</a></li>
+            <li><a href="file:///C:/Users/PRASAD%20BIRDAR/Desktop/khan/achiv.html">Achivements</a></li>
+            <li><a href="#">   </a></li>
+          </ul>
+        </li>
+        
+		
+		
+		
+        <li><a href="file:///C:/Users/PRASAD%20BIRDAR/Desktop/khan/contacts.html">FACULTY</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+ 
+ 
+
+ </li>
+ <li><a href="#"><span class="glyphicon glyphicon-user"></span> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button></a></li>
+ 
+ 
+ 
+ 
+<div id="id01" class="modal4">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container4">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+ 
+ 
+ 
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"  ></span> <button  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></a></li>
+      
+	  <div id="id01" class="modal4">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer4">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close4" title="Close Modal4">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container4">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container4" style="background-color:#f1f1f1">
+      <button type="button4" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+	  </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<h2 class="w3-center" style="   color: rgba(0,0,0,0.6);
+text-shadow: 2px 8px 6px;
+
+                  " >INFORMATION SCIENCE</h2>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="file:///C:/Users/PRASAD%20BIRDAR/Desktop/khan/about.html">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="file:///C:/Users/PRASAD%20BIRDAR/Desktop/khan/contacts.html">Contact</a>
+</div>
+
+<div id="main">
+  
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+
+<div class="slider" id="main-slider">
+	<div class="slider-wrapper">
+  <img alt="First" class="slide"   src="5278_BangaloreInstituteofTechnologyBITBangalore_1413865605_original.jpg" width="100%" height="400px">
+  <img alt="Second" class="slide"  src="25.jpg" width="100%" height="400px" >
+  <img alt="Third" class="slide"  src="ComputerLabImages1.jpg" width="100%" height="400px" >
+  
+</div>
+</div>
+
+
+<div class="example1" marquee bgcolor="grey" >
+<h4>BANGALORE INSTITUTE OF TECHNOLOGY</h4>
+</div>
+<div>
+<h1 style="font-family:verdana;text-align:center;  ">Information Science And Engineering Department<h1>
+<span style="float: left;
+          font-size: 24pt;
+          
+          color: grey;
+          padding: 0.5cm 7cm;" >  <p style="font-family:Brush Script Std, Brush Script MT, cursive;font-size:25px;" >
+ The department of Information Science and Engineering came into existence in the year 2000.<br /> It is headed by Dr. J. Prakash supported by a highly qualified and dedicated staff.<br />
+Realizing well in time that theinformation technology wave has become a phenomenon in itself over the past few years, the institute established a separate department to cater the ever-growing demand for professionals in this challenging field.<br />
+The department aims at cultivating thirst for knowledge, vigor and the vision to look beyond the evident in students. The students are well versed with the exhaustive and thoroughly chosen curriculum, guided as they are by an experienced faculty.<br />
+Hands on training sessions in various fields of application of IT have imparted to the students considerable acumen in the vast sector. The students perform project work as part of their curriculum to enhance their specification skills, leading to multifaceted development of their engineering concepts.</p></span>
+</div>
+
+
+
+<div class="row3">
+  <div class="column3">
+    <div class="card3">
+	<h2 style="background-color:blue; text-align:center;">Placement</h2>
+      <img src="placement.jpg" alt="Jane" style="width:100%;height:250px;">
+      <div class="container3"><br />
+       <div>
+       
+        <p style="float: center;
+          font-size: 20pt;
+        
+          color: grey;
+         ">Students of BIT have excellent academic records and are placed in esteemed industries and corporate sectors. The graduates and post graduate students of BIT are continuously trained on aptitude, technical and soft skills...</p>
+        </div>
+        <p><button class="button3">More INFORMATION</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column3">
+    <div class="card3"><div>
+	<h2 style="background-color:blue; text-align:center;">NEWS & EVENTS</h2>
+	</div>
+      <img src="news.jpg" alt="Mike" style="width:100%;height:250px;">
+      <div class="container3"><br />
+        <div>
+        
+        <p style="float: center;
+          font-size: 20pt;
+        
+          color: grey;
+         ">To nurture the cultural and technical talents of BIT students, college conducts annual fest called MANTHAN and also to highlight the glorious years of college history we bring out periodical magazine BITANNICA.</p>
+        </div>
+        <p><button class="button3">More Information</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column3">
+    <div class="card3">
+	<h2 style="background-color:blue; text-align:center;">library</h2>
+      <img src="library.jpg" alt="John" style="width:100%;height:250px;">
+      <div class="container3"><br />
+      <div>  
+        
+        <p style="float: center;
+          font-size: 20pt;
+        
+          color: grey;
+         "> Library serves as a resource centre and aims to develop a comprehensive collection of document’s useful for faculty and students of the institute and provides an efficient dissemination of knowledge............................</p>
+        </div>
+        <p><button class="button3">More INFORMATION</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div>
+<button class="button" style="padding:-50%" ><span>home</span></button>
+</div>
+<div>
+<hr style="color:black; ">
+</div><br />
+<div  >
+<i class="material-icons" style="font-size:48px;float: left;
+          color:silver
+          padding: 0.5cm 7cm;">direction</i>
+</div>
+
+
+
+<div>
+<footer class="footer">
+        <div class="container text-left">
+            <small style="color:grey" class="copyright">Copyright &copy 2015 SVAPP Private Limited.All Rights Reserved.</small>
+            <a href="#"><small style="color:grey" class="fa fa-lg fa-skype pull-right">  </small></a>
+            <a href="#"><small style="color:grey" class="fa fa-lg fa-google-plus pull-right">  </small></a>
+            <a href="#"><small style="color:grey" class="fa fa-lg fa-linkedin pull-right">  </small></a>
+            <a href="#"><small style="color:grey" class="fa fa-lg fa-twitter pull-right">  </small></a>
+            <a href="#"><small style="color:grey" class="fa fa-lg fa-facebook pull-right">  </small></a>
+        </div><!--End container-->
+    </footer><!--End footer 2-->
+</div>
+<script>
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+
+function myFunction() {
+    var x = document.getElementById("mySearch").placeholder;
+    document.getElementById("demo").innerHTML = x;
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+</script>
+<div>
+
+</div>
+</body>
+</html>
